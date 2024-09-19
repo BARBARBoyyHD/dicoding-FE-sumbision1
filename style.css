@@ -1,0 +1,341 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in width */
+  position: fixed;
+  background-color: #f5f5f5;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  cursor: pointer;
+}
+
+.wrap-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffff;
+  padding: 0 10px; /* Optional: adds horizontal padding */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+header a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+header h1 {
+  color: black;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  margin: 0; /* Remove margin to prevent overflow */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+article {
+  color: black;
+}
+
+.quote {
+  margin-top: 20px;
+  width: 50%;
+  border-radius: 10px;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #09c8f8, #f5f5f5);
+}
+.content {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.house-image {
+  margin-top: 20px;
+  width: 50%;
+  min-height: 100vh;
+  border-radius: 10px;
+  background-image: url("/asset/house.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.quote-contaienr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+}
+.book-now {
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.book-now:hover{
+  background-color:#09c8f8;
+  
+}
+
+.About{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    
+}
+.wrap-about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.wrap-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; /* Takes the full height of the page */
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(2); /* Ensure it starts at the first image */
+}
+
+
+.slide {
+  display: flex; /* To center the image inside the slide */
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures image fits inside the slide box */
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrap-article-and-aside{
+  display: flex;
+  flex-direction: row;
+  min-height: 80vh;
+  
+}
+.article{
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  width: 100%;
+  background-color: #fffefe;
+}
+.wrap-article{
+  width: 80%;
+}
+.read-more{
+  width: 120px;
+  height: 70px;
+  border: none;
+  border-radius: 10px;
+  background-color: #09c8f8;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.read-more:hover{
+  background-color: black;
+}
+.aside{
+  border-radius: 10px;
+  background-image: url("/asset/building.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  min-height: 20vh;
+  margin-top: 10px;
+}
+.wrap-navigation{
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 200px;
+  justify-content: center;
+  justify-content: space-between;
+}
+.wrap-nav{
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-company h1,.wrap-company p{
+  margin: 0;
+}
+.wrap-nav a{
+  text-decoration: none;
+  color: white;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+.contact h1,
+.contact p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0px;
+  }
+
+  .house-image, .quote {
+    width: auto;
+    margin: 0; /* Ensure no margins */
+    padding: 0; /* Remove any padding */
+  }
+
+  .quote {
+    border-radius: 0px;
+  }
+
+  .house-image {
+    border-radius: 0px;
+  }
+
+  .wrap-article-and-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-aside img {
+    width: auto; /* Ensures the image is responsive */
+    height: auto; /* Keeps the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+  }
+
+  .aside {
+    width: 100%; /* Full width in column layout */
+    height: 300px; /* Set a fixed height to make sure the image is visible */
+    background-size: cover;
+  }
+
+  .article {
+    width: auto;
+  }
+  .wrap-navigation{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+  }
+  .copyright{
+    font-size: 5px;
+    text-align: center;
+  }
+  .read-more{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
