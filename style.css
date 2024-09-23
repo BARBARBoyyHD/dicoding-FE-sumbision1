@@ -249,6 +249,20 @@ footer{
   justify-content: center;
   justify-content: space-between;
 }
+.navigation{
+  display: flex;
+
+}
+.navigation ul {
+  gap: 20px;
+  display: flex;
+  list-style-type: none; /* Menghilangkan bullet points */
+  padding: 0;
+  margin: 0;
+}
+.navigation a:hover {
+  color: #ddd; /* Warna saat hover */
+}
 .wrap-nav{
   display: flex;
   flex-direction: column;
